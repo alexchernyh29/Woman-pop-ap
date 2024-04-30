@@ -1,0 +1,238 @@
+.popup
+    position relative
+    width 100%
+    height 100vh
+    
+    &__line
+        position absolute
+        top 0
+        right 0
+        width w(1000)
+        z-index 3
+        display none
+        img
+            width 100%
+
+        +below(769px)
+            display none
+
+    &__wrap
+        position relative
+        background-color rgba(0, 0, 0, 0.5)
+        width 100%
+        height 100vh
+        z-index 1
+
+    &__content
+        padding w(40) w(60)
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%,-50%)
+        border-radius w(40)
+        max-width w(1300)
+        width 100%
+        background-color $c-white
+        display flex
+        flex-direction column
+        justify-content flex-start
+        z-index 2
+        +below(769px)
+            padding wm(25)
+            max-width wm(300)
+            border-radius wm(40)
+
+    &__answer
+        padding w(40) w(60)
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%,-50%)
+        border-radius w(40)
+        max-width w(1300)
+        width 100%
+        max-height w(705)
+        height 100%
+        background-color $c-white
+        display flex
+        flex-direction column
+        justify-content flex-end
+        z-index 2
+        display none
+        +below(769px)
+            padding wm(25)
+            max-width wm(300)
+            border-radius wm(40)
+            max-height wm(405)
+            height 100%
+
+    &__title
+        font-family $ff-MabryPro-Bold
+        font-weight 700
+        font-size w(64)
+        line-height w(74)
+        letter-spacing 0.1em
+        text-transform uppercase
+        color $c-blue
+        position relative
+        display inline-block
+        &::before
+            content ''
+            position absolute
+            top w(-2)
+            left w(-10)
+            width w(65)
+            height w(65)
+            border w(5) solid $c-orange
+            background-color $c-white
+            border-radius 50%
+            z-index -1
+        
+        +below(769px)
+            margin-top wm(60)
+            font-size wm(24)
+            line-height wm(26)
+            &::before
+                top wm(-1)
+                left wm(-4)
+                width wm(25)
+                height wm(25)
+                border wm(1) solid $c-orange
+
+    &__info
+        margin-top w(15)
+        font-family $ff-MabryPro-Regular
+        font-weight 400
+        font-size w(32)
+        line-height w(36)
+        color $c-black
+        &.small
+            max-width w(700)
+
+        +below(769px)
+            margin-top wm(10)
+            font-size wm(12)
+            line-height wm(18)
+            &.small
+                max-width 100%
+
+
+    &__list
+        margin-top w(35)
+        max-width w(770)
+        width 100%
+        display flex
+        flex-direction row
+        justify-content space-between
+        align-items center
+        +below(769px)
+            margin-top wm(15)
+            max-width 100%
+            &.last
+                margin-bottom wm(100)
+
+    &__text
+        font-family $ff-MabryPro-Medium
+        font-weight 400
+        font-size w(32)
+        line-height w(36)
+        color $c-orange
+        +below(769px)
+            font-size wm(14)
+            line-height wm(16)
+
+    &__input
+        max-width w(555)
+        width 100%
+        border w(1) solid $c-orange-light
+        border-radius w(5)
+        height w(65)
+        font-family $ff-MabryPro-Medium
+        font-weight 400
+        font-size w(32)
+        line-height w(36)
+        color $c-orange
+        padding-left w(10)
+        +below(769px)
+            max-width wm(150)
+            border wm(1) solid $c-orange-light
+            border-radius wm(5)
+            height wm(35)
+            font-size wm(14)
+            line-height wm(16)
+            padding-left wm(5)
+
+    &__button
+        position absolute
+        bottom w(0)
+        right w(-1)
+        color white
+        width w(440)
+        height w(150)
+        padding-top w(40)
+        padding-left w(150)
+        font-family $ff-MabryPro-Bold
+        font-weight 700
+        font-size w(41)
+        line-height w(41)
+        letter-spacing 0.04em
+        background-image url('/images/send.png')
+        background-repeat no-repeat
+        background-size 100%
+        cursor pointer
+        text-transform uppercase
+        border none
+        +below(769px)
+            width wm(240)
+            height wm(70)
+            padding-top wm(20)
+            padding-left wm(60)
+            font-size wm(21)
+            line-height wm(21)
+
+    &__btn-close
+        position absolute
+        top w(35)
+        right w(30)
+        width w(90)
+        height w(90)
+        border-radius 50%
+        border w(5) solid $c-orange
+        background-image url('/images/close.svg')
+        background-repeat no-repeat
+        background-position center
+        cursor pointer
+        z-index 3
+        +below(769px)
+            top wm(25)
+            right wm(20)
+            width wm(30)
+            height wm(30)
+            border wm(2) solid $c-orange
+            background-size 50%
+
+    &__mail
+        font-family $ff-MabryPro-Regular
+        font-weight 400
+        font-size w(32)
+        line-height w(36)
+        color $c-orange-light
+        text-decoration underline
+        text-decoration-skip-ink none
+        margin-bottom w(50)
+        +below(769px)
+            font-size wm(12)
+            line-height wm(18)
+            margin-bottom wm(50)
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Для Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
