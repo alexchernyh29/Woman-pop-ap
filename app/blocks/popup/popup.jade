@@ -1,28 +1,29 @@
 mixin popup()
     +b('section').popup
-        +e.line
-            img(src="/images/Vector.png", alt="img")
         +e.wrap
             +e('form')(id="myForm").content
-                +e.btn-close
-                +e.title Форма<br>регистрации
-                +e.info Регистрация на Shkulev sup-завтрак 2024
-                +e.list
-                    +e('p').text ФИО
-                    +e('input')(id="name" name="name" type="text").input
-                +e.list
-                    +e('p').text Компания
-                    +e('input')(id="company" name="company" type="text").input
-                +e.list
-                    +e('p')(id="post" name="post" type="text").text Должность
-                    +e('input').input
-                +e.list
-                    +e('p').text E-mail
-                    +e('input')(id="email" name="email" type="email").input
-                +e.list.last
-                    +e('p').text Мобильный<br>телефон
-                    +e('input')(id="phone" name="phone" type="number").input
-                +e('button')(type="submit").button отправить
+                +e.content-wrap
+                    //- +e.btn-close
+                    +e.title Форма<br>регистрации
+                    +e.info Регистрация на Shkulev sup-завтрак 2024
+                    +e.list
+                        +e('p').text ФИО
+                        +e('input')(id="name" name="name" type="text").input
+                    +e.list
+                        +e('p').text Компания
+                        +e('input')(id="company" name="company" type="text").input
+                    +e.list
+                        +e('p')(id="post" name="post" type="text").text Должность
+                        +e('input').input
+                    +e.list
+                        +e('p').text E-mail
+                        +e('input')(id="email" name="email" type="email").input
+                    +e.list.last
+                        +e('p').text Мобильный<br>телефон
+                        +e('input')(id="phone" name="phone" type="number").input
+                    +e('button')(type="submit").button отправить
+            +e.line
+                img(src="/images/Vector.png", alt="img")
             +e.answer
                 +e.btn-close.answer
                 +e.title.answer Что то пошло не так.

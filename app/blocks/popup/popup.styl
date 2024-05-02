@@ -7,9 +7,8 @@
         position absolute
         top 0
         right 0
-        width w(1000)
-        z-index 3
-        display none
+        width w(620)
+        z-index 2
         img
             width 100%
 
@@ -21,10 +20,8 @@
         background-color rgba(0, 0, 0, 0.5)
         width 100%
         height 100vh
-        z-index 1
 
     &__content
-        padding w(40) w(60)
         position absolute
         top 50%
         left 50%
@@ -33,14 +30,20 @@
         max-width w(1300)
         width 100%
         background-color $c-white
+        z-index 1
+        +below(769px)
+            max-width wm(300)
+            border-radius wm(40)
+
+    &__content-wrap
+        padding w(40) w(60)
+        position relative
         display flex
         flex-direction column
         justify-content flex-start
-        z-index 2
+        z-index 3
         +below(769px)
             padding wm(25)
-            max-width wm(300)
-            border-radius wm(40)
 
     &__answer
         padding w(40) w(60)
@@ -57,8 +60,8 @@
         display flex
         flex-direction column
         justify-content flex-end
-        z-index 2
         display none
+        z-index 3
         +below(769px)
             padding wm(25)
             max-width wm(300)
@@ -153,6 +156,7 @@
         line-height w(36)
         color $c-orange
         padding-left w(10)
+        z-index 4
         +below(769px)
             max-width wm(150)
             border wm(1) solid $c-orange-light
@@ -176,12 +180,14 @@
         font-size w(41)
         line-height w(41)
         letter-spacing 0.04em
+        background-color transparent
         background-image url('/images/send.png')
         background-repeat no-repeat
         background-size 100%
         cursor pointer
         text-transform uppercase
         border none
+        z-index 4
         +below(769px)
             width wm(240)
             height wm(70)
@@ -202,7 +208,7 @@
         background-repeat no-repeat
         background-position center
         cursor pointer
-        z-index 3
+        z-index 4
         +below(769px)
             top wm(25)
             right wm(20)
