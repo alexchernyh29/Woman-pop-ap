@@ -7,7 +7,7 @@ $(() => {
         $.ajax({
             url: '/save_form/',
             type: 'POST',
-            data: $(this).serialize(),
+            data: $('#myForm').serialize(),
             dataType: 'json',
             success: function(response) {
                 if (response.error === 0) {
