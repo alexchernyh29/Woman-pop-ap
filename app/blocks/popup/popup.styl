@@ -17,7 +17,7 @@
 
     &__wrap
         position relative
-        background-color rgba(0, 0, 0, 0.5)
+        background-color $c-white
         width 100%
         height 100vh
 
@@ -200,22 +200,24 @@
         position absolute
         top w(35)
         right w(30)
-        width w(90)
-        height w(90)
-        border-radius 50%
+        padding w(25) w(10)
+        font-family $ff-MabryPro-Bold
+        font-weight 700
+        font-size w(41)
+        line-height w(41)
+        letter-spacing 0.04em
+        border-radius w(10)
         border w(5) solid $c-orange
-        background-image url('/images/close.svg')
-        background-repeat no-repeat
-        background-position center
+        background $c-orange
+        color $c-white
         cursor pointer
         z-index 4
         +below(769px)
             top wm(25)
             right wm(20)
-            width wm(30)
-            height wm(30)
+            border-radius wm(10)
+            padding wm(15) wm(10)
             border wm(2) solid $c-orange
-            background-size 50%
 
     &__mail
         font-family $ff-MabryPro-Regular
